@@ -1,12 +1,12 @@
 import React from "react"
 import Form from "./assets/js/Form.js"
+import Success from "./assets/js/Success.js"
 
 export default function App() {
   return <>
     <Form/>
-
-
-    <div class="attribution">
+    <Success/>
+    <div className="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </div>

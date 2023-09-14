@@ -1,35 +1,66 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import illustrationMobile from "../images/illustration-sign-up-mobile.svg"
+import illustrationDesktop from "../images/illustration-sign-up-desktop.svg"
+import listIcon from "../images/icon-list.svg"
+
 
 const Form = () => {
-  return <>
-    {/*Sign-up form start */}
-    Stay updated!
 
-    Join 60,000+ product managers receiving monthly updates on:
+  const [width, setWidth] = useState(window.innerWidth);
 
-    Product discovery and building what matters
-    Measuring to ensure updates are a success
-    And much more!
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    }
+  }, []);
 
-    Email address
-    email@company.com
+  const isMobile = width <= 768
+  const onInputChange = () => {
+    console.log("input changed...")
+  }
 
-    Subscribe to monthly newsletter
+  return (
+      <div className='container'>
+        <img src={isMobile ? illustrationMobile : illustrationDesktop} alt='' className=""/>
+        <form action='' className='form'>
 
+          <label className='form-label'>
+            Stay updated!
+          </label>
+          <p className='form-legend'>
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
 
-    {/*// Sign-up form end*/}
+          <ul className="list">
+            <li className="list-item">
+              <img src={listIcon} alt='' className={"list-icon"}/>
+              <span>Product discovery and building what matters</span>
+            </li>
+            <li className="list-item">
+              <img src={listIcon} alt='' className={"list-icon"}/>
+              Measuring to ensure updates are a success
+            </li>
+            <li className="list-item">
+              <img src={listIcon} alt='' className={"list-icon"}/>
+              And much more!
+            </li>
+          </ul>
+          <div className='input-label'>
+            Email address
+          </div>
+          <input type='text' name='email' id='email' value='email@company.com' onChange={onInputChange}
+                 className='input'/>
+          <button className="btn">
+            Subscribe to monthly newsletter
+          </button>
+        </form>
+      </div>
+  )
 
-    {/*// Success message start*/}
-
-    Thanks for subscribing!
-
-    A confirmation email has been sent to ash@loremcompany.com.
-    Please open it and click the button inside to confirm your subscription.
-
-    Dismiss message
-
-    {/*// Success message end*/}
-  </>
 }
 
 export default Form

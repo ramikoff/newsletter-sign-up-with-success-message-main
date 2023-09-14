@@ -1,6 +1,10 @@
-@import "globals/_index";
+@import "index";
+@import "elements/_form.scss";
 
 body {
   font-family: "Roboto", serif;
   font-weight: normal;
+  font-size: 16px;
+  background-color: $grey;
 }
+
