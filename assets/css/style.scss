@@ -5,6 +5,18 @@ body {
   font-family: "Roboto", serif;
   font-weight: normal;
   font-size: 16px;
-  background-color: $grey;
+  background-color: $charcoal-grey;
 }
 
+
+#app {
+  display: flex;
+  flex-direction: column;
+  place-items: center flex-end;
+}
+
+.attribution {
+  color: $white;
+  position: absolute;
+  bottom: 0;
+}

@@ -1,31 +1,32 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import illustrationMobile from "../images/illustration-sign-up-mobile.svg"
 import illustrationDesktop from "../images/illustration-sign-up-desktop.svg"
 import listIcon from "../images/icon-list.svg"
 
 
-const Form = () => {
+const Form = (props) => {
 
-  const [width, setWidth] = useState(window.innerWidth);
+  const [inputValue, setInputValue] = useState('email@company.com');
 
-  function handleWindowSizeChange() {
-    setWidth(window.innerWidth);
+  const onInputChange = (event) => {
+    setInputValue(event.target.value)
   }
-  useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
-    return () => {
-      window.removeEventListener('resize', handleWindowSizeChange);
-    }
-  }, []);
 
-  const isMobile = width <= 768
-  const onInputChange = () => {
-    console.log("input changed...")
+  const sendForm = (event) => {
+    event.preventDefault()
+    props.isSuccessPullData(validateEmail(inputValue))
   }
+
+  const validateEmail = (email) => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email)
+  }
+
+
 
   return (
-      <div className='container'>
-        <img src={isMobile ? illustrationMobile : illustrationDesktop} alt='' className=""/>
+      <div className='container' id="form">
+        <img src={props.isMobile ? illustrationMobile : illustrationDesktop} alt='' className=""/>
         <form action='' className='form'>
 
           <label className='form-label'>
@@ -52,9 +53,9 @@ const Form = () => {
           <div className='input-label'>
             Email address
           </div>
-          <input type='text' name='email' id='email' value='email@company.com' onChange={onInputChange}
+          <input type='text' name='email' id='email' value={inputValue} onChange={onInputChange}
                  className='input'/>
-          <button className="btn">
+          <button className="btn" onClick={sendForm}>
             Subscribe to monthly newsletter
           </button>
         </form>

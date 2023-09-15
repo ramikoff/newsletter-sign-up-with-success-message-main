@@ -1,0 +1,20 @@
+#success {
+  .list-icon--success {
+    height: 70px;
+    align-self: flex-start;
+    margin-top: 7rem;
+    @media screen and (min-width: 768px) {
+      margin-top: 1rem;
+      width: 60px;
+    }
+  }
+
+  .form-label {
+    margin-top: 2rem;
+    line-height: 1.1;
+  }
+}
+
+
+
+

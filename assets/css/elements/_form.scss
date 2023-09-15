@@ -1,10 +1,9 @@
 .form {
   margin-top: 1rem;
-  padding: 2rem;
+  padding: 3rem 1rem 2rem 2rem;
 
   @media screen and (min-width: 768px) {
-    padding-top: 5rem;
-    margin-right: 2rem;
+    max-width: 50%;
   }
 
   &-label {
@@ -13,12 +12,12 @@
   }
 
   &-legend {
-    margin-top: 0.5rem;
+    margin-top: 1.5rem;
   }
 
   .list {
     list-style-type: none;
-    margin-top: 1rem;
+    margin-top: 1.5rem;
     margin-left: 0;
     padding: 0;
   }
@@ -54,25 +53,10 @@
     }
   }
 
-  .btn {
-    width: 100%;
-    margin-top: 1.5rem;
-    background: $dark-slate-grey;
-    border-radius: 7px;
-    color: $white;
-    padding: 15px;
-    font-weight: bold;
-    border: none;
 
-    &:hover, &:focus {
-      background: $tomato;
-      color: $white;
-      cursor: pointer;
-      box-shadow: 5px 14px 10px 0px #faa7a2;
-    }
-  }
 
 }
+
 
 
 
