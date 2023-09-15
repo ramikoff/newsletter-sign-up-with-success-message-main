@@ -14,14 +14,13 @@ const Form = (props) => {
 
   const sendForm = (event) => {
     event.preventDefault()
-    props.isSuccessPullData(validateEmail(inputValue))
+    props.isFormSuccessPullData(validateEmail(inputValue), inputValue)
   }
 
   const validateEmail = (email) => {
     const re = /\S+@\S+\.\S+/;
     return re.test(email)
   }
-
 
 
   return (
