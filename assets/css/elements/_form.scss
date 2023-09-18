@@ -54,7 +54,7 @@
       border: 1px solid black;
     }
 
-    &--error {
+    &.input--error {
       border: 1px solid $tomato;
       color: $tomato;
       background-color: #f6e5e4;

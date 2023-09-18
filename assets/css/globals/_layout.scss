@@ -7,6 +7,9 @@
 
   &#form {
     padding: 0;
+    @media screen and (min-width: 768px) {
+      padding: 1.5rem;
+    }
   }
 
     @media screen and (min-width: 768px) {
