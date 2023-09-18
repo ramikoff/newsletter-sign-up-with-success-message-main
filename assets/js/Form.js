@@ -7,14 +7,20 @@ import listIcon from "../images/icon-list.svg"
 const Form = (props) => {
 
   const [inputValue, setInputValue] = useState('email@company.com');
+  const [error, setError] = useState(false);
+
 
   const onInputChange = (event) => {
     setInputValue(event.target.value)
+    if(event.target.value === '')
+      setError(false)
   }
 
   const sendForm = (event) => {
     event.preventDefault()
     props.isFormSuccessPullData(validateEmail(inputValue), inputValue)
+    if (validateEmail(inputValue) === false)
+      setError(true)
   }
 
   const validateEmail = (email) => {
@@ -50,10 +56,10 @@ const Form = (props) => {
             </li>
           </ul>
           <div className='input-label'>
-            Email address
+            Email address {error ? <span className='error-message'>Valid email required</span> : ''}
           </div>
           <input type='text' name='email' id='email' value={inputValue} onChange={onInputChange}
-                 className='input'/>
+                 className={error ? 'input input--error' : 'input'}/>
           <button className="btn" onClick={sendForm}>
             Subscribe to monthly newsletter
           </button>

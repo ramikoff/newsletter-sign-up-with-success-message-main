@@ -37,6 +37,8 @@
     margin-top: 2rem;
     font-size: 14px;
     font-weight: bold;
+    display: flex;
+    justify-content: space-between;
   }
 
   .input {
@@ -51,6 +53,17 @@
       color: inherit;
       border: 1px solid black;
     }
+
+    &--error {
+      border: 1px solid $tomato;
+      color: $tomato;
+      background-color: #f6e5e4;
+    }
+  }
+
+
+  .error-message {
+    color: $tomato;
   }
 
 

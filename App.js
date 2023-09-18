@@ -25,8 +25,13 @@ export default function App() {
     setEmail(emailData)
   }
 
+  // const isDismissBtnClicked = (isClicked) => {
+  //   isClicked ? setIsSuccess(false) : null
+  // }
+
+
   return <>
-    {isSuccess ? <Success isMobile={isMobile} email={email}/> : <Form isMobile={isMobile} isFormSuccessPullData={isFormSuccessPullData}/>}
+    {isSuccess ? <Success isMobile={isMobile} email={email} /> : <Form isMobile={isMobile} isFormSuccessPullData={isFormSuccessPullData} />}
 
     <div className="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

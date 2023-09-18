@@ -2,7 +2,8 @@ import React from "react";
 import listIcon from "../images/icon-list.svg"
 
 const Success = (props) => {
-  return <>
+
+   return <>
     <div className='container container--small' id="success">
       <img src={listIcon} alt='' className={"list-icon list-icon--success"}/>
       <h2 className='form-label'>
