@@ -17,7 +17,8 @@
 
   &--dismiss {
     margin-top: 15rem;
-    @media screen and (min-width: 768px) {
+
+    @include md {
       margin-top: 2rem;
     }
   }
