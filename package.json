@@ -4,13 +4,15 @@
   "description": "![Design preview for the Newsletter sign-up form with success message coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "start": "parcel serve ./index.html"
+    "start": "parcel serve ./index.html",
+    "deploy": "rm -rf dist/ && npm build && gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.9.3",
+    "gh-pages": "^6.0.0",
     "parcel": "^2.9.3",
     "process": "^0.11.10",
     "sass": "^1.66.1"
