@@ -1,18 +1,9 @@
 .form {
-  margin-top: 1rem;
   padding: 3rem 1rem 2rem 2rem;
 
-  @media screen and (min-width: 768px) {
+  @include md {
     max-width: 50%;
-  }
-
-  &-label {
-    font-size: 3rem;
-    font-weight: bold;
-  }
-
-  &-legend {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
   }
 
   .list {
@@ -35,8 +26,6 @@
 
   .input-label {
     margin-top: 2rem;
-    font-size: 14px;
-    font-weight: bold;
     display: flex;
     justify-content: space-between;
   }
@@ -48,25 +37,23 @@
     border: 1px solid $grey;
     border-radius: 7px;
     color: $grey;
-    &:hover, &:focus {
-      cursor: pointer;
-      color: inherit;
-      border: 1px solid black;
-    }
-
-    &.input--error {
-      border: 1px solid $tomato;
-      color: $tomato;
-      background-color: #f6e5e4;
-    }
   }
 
+  .input:hover, .input:focus {
+    cursor: pointer;
+    color: inherit;
+    border: 1px solid black;
+  }
+
+  .input.input--error {
+    border: 1px solid $tomato;
+    color: $tomato;
+    background-color: #f6e5e4;
+  }
 
   .error-message {
     color: $tomato;
   }
-
-
 
 }
 

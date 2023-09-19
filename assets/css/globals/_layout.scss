@@ -1,3 +1,8 @@
+// Breakpoints
+$md: 768px;
+
+
+// Containers
 .container {
   display: flex;
   flex-direction: column;
@@ -5,30 +10,33 @@
   padding: 1rem;
   background-color: $white;
 
-  &#form {
-    padding: 0;
-    @media screen and (min-width: 768px) {
-      padding: 1.5rem;
-    }
+  @include md {
+    padding: 1.5rem;
+    max-width: 1200px;
+    transform: translateY(50%);
+    border-radius: 30px;
   }
 
-    @media screen and (min-width: 768px) {
+  &--md-large {
+    padding: 0;
+
+    @include md {
+      margin: auto;
+      padding: 1.5rem;
       flex-direction: row-reverse;
       max-width: 1200px;
-      margin: auto;
-      transform: translateY(50%);
-      border-radius: 30px;
-      padding: 1.5rem;
     }
 
-  &--small {
-    @media screen and (min-width: 768px) {
+  }
+
+
+  &--md-small {
+    @include md {
       width: 500px;
       height: 500px;
       flex-direction: column;
       padding: 3rem 4rem;
     }
   }
-
 }
 

@@ -1,12 +1,14 @@
 // Globals
 @import "globals/reset";
-@import "globals/fonts";
 @import "globals/colors";
-@import "globals/typography";
+@import "globals/mixins";
 @import "globals/layout";
+@import "globals/fonts";
+@import "globals/typography";
 
 // Atoms
 @import "atoms/btn";
+@import "atoms/attribution";
 
 // Elements
 @import "elements/form";

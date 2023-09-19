@@ -1,5 +1,5 @@
 @import "index";
-@import "elements/_form.scss";
+//@import "elements/_form.scss";
 
 body {
   font-family: "Roboto", serif;
@@ -15,8 +15,8 @@ body {
   place-items: center flex-end;
 }
 
-.attribution {
-  color: $white;
-  position: absolute;
-  bottom: 0;
+.lead {
+  margin-top: 1.5rem;
 }
+
+
