@@ -1,0 +1,225 @@
+*, :before, :after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+img, picture, video, canvas, svg {
+  max-width: 100%;
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+.container {
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  display: flex;
+}
+
+@media screen and (width >= 768px) {
+  .container {
+    border-radius: 30px;
+    max-width: 1200px;
+    padding: 1.5rem;
+    transform: translateY(50%);
+  }
+}
+
+.container--md-large {
+  padding: 0;
+}
+
+@media screen and (width >= 768px) {
+  .container--md-large {
+    flex-direction: row-reverse;
+    max-width: 1200px;
+    margin: auto;
+    padding: 1.5rem;
+  }
+
+  .container--md-small {
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    padding: 3rem 4rem;
+  }
+}
+
+@font-face {
+  font-family: Roboto;
+  src: local(Roboto Regular), local(Roboto Bold);
+}
+
+.heading {
+  letter-spacing: .5px;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+@media screen and (width >= 768px) {
+  .heading {
+    font-size: 3rem;
+  }
+}
+
+.input-label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn {
+  color: #fff;
+  background: #242742;
+  border: none;
+  border-radius: 7px;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.btn:hover, .btn:focus {
+  color: #fff;
+  cursor: pointer;
+  background: #ff6257;
+  box-shadow: 5px 14px 10px #faa7a2;
+}
+
+.btn--dismiss {
+  margin-top: 15rem;
+}
+
+@media screen and (width >= 768px) {
+  .btn--dismiss {
+    margin-top: 2rem;
+  }
+}
+
+.attribution {
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+}
+
+.attribution a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.attribution a:hover, .attribution a:focus {
+  color: #9294a0;
+}
+
+.form {
+  padding: 3rem 1rem 2rem 2rem;
+}
+
+@media screen and (width >= 768px) {
+  .form {
+    max-width: 50%;
+    margin-top: 2rem;
+  }
+}
+
+.form .list {
+  margin-top: 1.5rem;
+  margin-left: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.form .list-item {
+  align-items: flex-start;
+  margin-top: .5rem;
+  display: flex;
+}
+
+.form .list-icon {
+  align-self: flex-start;
+  margin-right: 1rem;
+}
+
+.form .input-label {
+  justify-content: space-between;
+  margin-top: 2rem;
+  display: flex;
+}
+
+.form .input {
+  color: #9294a0;
+  border: 1px solid #9294a0;
+  border-radius: 7px;
+  width: 100%;
+  margin-top: .5rem;
+  padding: 15px;
+}
+
+.form .input:hover, .form .input:focus {
+  cursor: pointer;
+  color: inherit;
+  border: 1px solid #000;
+}
+
+.form .input.input--error {
+  color: #ff6257;
+  background-color: #f6e5e4;
+  border: 1px solid #ff6257;
+}
+
+.form .error-message {
+  color: #ff6257;
+}
+
+.icon-success {
+  align-self: flex-start;
+  height: 70px;
+  margin-top: 7rem;
+}
+
+@media screen and (width >= 768px) {
+  .icon-success {
+    width: 60px;
+    margin-top: 1rem;
+  }
+}
+
+body {
+  background-color: #36384e;
+  font-family: Roboto, serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+#app {
+  flex-direction: column;
+  place-items: center flex-end;
+  display: flex;
+}
+
+.lead {
+  margin-top: 1.5rem;
+}
+
+/*# sourceMappingURL=index.da93f014.css.map */
