@@ -4,7 +4,7 @@
   "description": "![Design preview for the Newsletter sign-up form with success message coding challenge](./design/desktop-preview.jpg)",
   "homepage": "https://ramikoff.github.io/newsletter-sign-up-with-success-message-main",
   "scripts": {
-    "start": "PARCEL_WORKERS=0 parcel serve ./index.html",
+    "start": "parcel serve ./index.html",
     "build": "parcel build ./index.html",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
