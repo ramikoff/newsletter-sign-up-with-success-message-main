@@ -7,7 +7,7 @@ import Button from "../atoms/Button";
 
 const Form = ({isFormSuccessPullData, isMobile}) => {
 
-  const [inputValue, setInputValue] = useState("email@company.com");
+  const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState(false);
 
   const onInputChange = (event) => {
@@ -59,7 +59,7 @@ const Form = ({isFormSuccessPullData, isMobile}) => {
             <label htmlFor='email'>Email address</label>  {error ? <span className="error-message">Valid email required</span> : ""}
           </div>
           <input type="text" name="email" id="email" value={inputValue} onChange={onInputChange}
-                 className={error ? "input input--error" : "input"}/>
+                 className={error ? "input input--error" : "input"} placeholder={"email@company.com"}/>
 
           <Button onClick={onSubscribe} className={"btn"} text={"Subscribe to monthly newsletter"}/>
 
