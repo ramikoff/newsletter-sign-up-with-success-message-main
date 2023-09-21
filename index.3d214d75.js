@@ -27539,14 +27539,22 @@ const Form = ({ isFormSuccessPullData, isMobile })=>{
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "input-label",
                         children: [
-                            "Email address ",
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("label", {
+                                htmlFor: "email",
+                                children: "Email address"
+                            }, void 0, false, {
+                                fileName: "assets/js/elements/Form.js",
+                                lineNumber: 59,
+                                columnNumber: 13
+                            }, undefined),
+                            "  ",
                             error ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
                                 className: "error-message",
                                 children: "Valid email required"
                             }, void 0, false, {
                                 fileName: "assets/js/elements/Form.js",
                                 lineNumber: 59,
-                                columnNumber: 36
+                                columnNumber: 68
                             }, undefined) : ""
                         ]
                     }, void 0, true, {
