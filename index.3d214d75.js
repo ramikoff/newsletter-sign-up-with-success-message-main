@@ -27416,7 +27416,7 @@ var _buttonDefault = parcelHelpers.interopDefault(_button);
 var _s = $RefreshSig$();
 const Form = ({ isFormSuccessPullData, isMobile })=>{
     _s();
-    const [inputValue, setInputValue] = (0, _react.useState)("email@company.com");
+    const [inputValue, setInputValue] = (0, _react.useState)("");
     const [error, setError] = (0, _react.useState)(false);
     const onInputChange = (event)=>{
         setInputValue(event.target.value);
@@ -27568,7 +27568,8 @@ const Form = ({ isFormSuccessPullData, isMobile })=>{
                         id: "email",
                         value: inputValue,
                         onChange: onInputChange,
-                        className: error ? "input input--error" : "input"
+                        className: error ? "input input--error" : "input",
+                        placeholder: "email@company.com"
                     }, void 0, false, {
                         fileName: "assets/js/elements/Form.js",
                         lineNumber: 61,
@@ -27596,7 +27597,7 @@ const Form = ({ isFormSuccessPullData, isMobile })=>{
         columnNumber: 7
     }, undefined);
 };
-_s(Form, "TdmKiiD72JTXvV7n8iJ4kit/bis=");
+_s(Form, "W3xp851WRe6tK5WL8bWuT3uni+k=");
 _c = Form;
 exports.default = Form;
 var _c;
