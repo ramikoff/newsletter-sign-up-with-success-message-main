@@ -41,7 +41,7 @@ p, h1, h2, h3, h4, h5, h6 {
     border-radius: 30px;
     max-width: 1200px;
     padding: 1.5rem;
-    transform: translateY(50%);
+    transform: translateY(30%);
   }
 }
 
@@ -53,7 +53,6 @@ p, h1, h2, h3, h4, h5, h6 {
   .container--md-large {
     flex-direction: row-reverse;
     max-width: 1200px;
-    margin: auto;
     padding: 1.5rem;
   }
 
