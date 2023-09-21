@@ -13,7 +13,7 @@ $md: 768px;
   @include md {
     padding: 1.5rem;
     max-width: 1200px;
-    transform: translateY(50%);
+    transform: translateY(30%);
     border-radius: 30px;
   }
 
@@ -21,7 +21,6 @@ $md: 768px;
     padding: 0;
 
     @include md {
-      margin: auto;
       padding: 1.5rem;
       flex-direction: row-reverse;
       max-width: 1200px;
